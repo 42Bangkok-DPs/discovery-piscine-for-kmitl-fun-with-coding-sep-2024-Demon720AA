@@ -1,0 +1,110 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #043eaa;
+  color: white;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: rgba(23, 33, 67, 0.436);
+}
+
+.title {
+  color:azure;
+  font-size: 18px;
+}
+
+body{
+  background-image: url('https://i.pinimg.com/originals/2e/e8/8b/2ee88bf78e4f76001f59bad5e91a6a03.gif');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+button{
+  border: none;   
+  outline: 0;
+  display: inline-block; 
+  padding: 8px;
+  color: white;
+  background-color: #181e40;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 22px;
+  color: azure;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+}
+  .parallax p{
+      color: black;
+      font-size: 20px;
+  }
+.parallax-1 {
+  background-image: url('https://www.ms-design.com/fileadmin/userdaten/content/Aktuelles_992-GT3-RS_1.jpg');
+}
+.parallax-2 {
+  background-image: url('https://en.endurance-info.com/sites/default/files/styles/image_richtext/public/2023-03/AbsoluteRacing2023_Porsche992GT3R_GTWCA_V2_1.png?itok=BWJKwBTm');
+}
+.content {
+  padding: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+}

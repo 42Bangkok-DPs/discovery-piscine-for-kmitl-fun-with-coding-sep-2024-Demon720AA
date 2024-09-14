@@ -5,17 +5,12 @@ $(document).ready(function () {
 
     let save = getCookie('todoList');
     if (save) {
-        TodoList = JSON.parse(save);
+        TodoList = JSON.parse(decodeURIComponent(save));
         render();
     }
 
     function addTask(taskText) {
-        // const taskDiv = document.createElement("div");
-        // taskDiv.className = "task";
-        // taskDiv.textContent = taskText;
         const $taskDiv = $('<div></div>').addClass('task').text(taskText);
-
-        // taskDiv.addEventListener("click", function() {
         $taskDiv.on("click", function() {
             const confirmDelete = confirm("Do you really want to remove this TO DO?");
             if (confirmDelete) {
@@ -27,18 +22,16 @@ $(document).ready(function () {
     }
 
     function render() {
-        // list.innerHTML = '';
         $list.empty();
         for (let index = 0; index < TodoList.length; index++) {
             const $taskDiv = addTask(TodoList[index]);
-            // list.append(taskDiv);
             $list.append($taskDiv);
         }
         saveTasks();
     }
 
     function saveTasks() {
-        document.cookie = "todoList=" + JSON.stringify(TodoList) + "; path=/";
+        document.cookie = "todoList=" + encodeURIComponent(JSON.stringify(TodoList)) + "; path=/";
     }
 
     function getCookie(name) {
@@ -52,7 +45,6 @@ $(document).ready(function () {
         return null;
     }
 
-    // document.getElementById("new").addEventListener("click", function() {
     $('#new').on('click', function () {
         let name = prompt("Enter your TO DO:");
         if (name) {
